@@ -21,13 +21,15 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    historyApiFallback: true,
+    open: true,
+  },
   plugins: [
-    new HtmlWebpackPlugin([
-      {
-        inject: true,
-        template: './public/index.html',
-        filename: './index.html',
-      },
-    ]),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './public/index.html',
+      filename: './index.html',
+    }),
   ],
 };
